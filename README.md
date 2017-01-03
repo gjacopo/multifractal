@@ -10,7 +10,7 @@ Low-level image processing multifractal filters used in the experiments/analyses
 
 *since*:          2002
 
-*license*:        [EUPL](https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-en_0.pdf) (_mention the source code or the references below_)
+*license*:        [EUPL](https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-en_0.pdf) (_mention the source code or any of the references below_)
 
 **Description**
 
