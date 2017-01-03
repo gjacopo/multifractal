@@ -1,6 +1,5 @@
 % DERIVE_MSM - Transform the Hausdorff measure of the MSM in the frequency domain.
 %
-%
 %% Description
 % The function computes:
 %     IFFT( FFT(\delta_{msm} * f^(-1)) ) 
