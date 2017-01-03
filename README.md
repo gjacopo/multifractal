@@ -14,13 +14,13 @@ Low-level image processing multifractal filters used in the experiments/analyses
 
 **Description**
 
-The code source files will enable you to reproduce some of the experiments mentioned in the references [below](References), namely for :
+The code source files will enable you to reproduce some of the experiments mentioned in the references [below](References), namely for:
 * multifractal analysis and reconstruction of images using the so-called micro-wavelet,
 * estimation of the multifractal singularity exponents and the so-called Most Singular Manifold.
 
-See [`Contents.m`](Contents.m) for the whole list of functions. 
+Call [`run_multifractal.m`](run_multifractal.m) for an example of application. See also [`Contents.m`](Contents.m) for the whole list of functions. 
 
-**<a name="Reference"></a>References**
+**<a name="References"></a>References**
 
 * Yahia H., Turiel A., Chrysoulakis N., Grazzini J., Prastacos P., and Herlin I. (2008): [**Application of the multifractal microcanonical formalism to the detection of fire plumes in NOAA-AVHRR data**](http://www.tandfonline.com/doi/abs/10.1080/01431160701840174), _International Journal of Remote Sensing_, 29(14):4189-4205, doi:[10.1080/01431160701840174](http://dx.doi.org/10.1080/01431160701840174).
 * Grazzini J., Turiel A., Yahia H., and Herlin I. (2007): [**A multifractal approach for extracting relevant textural areas in satellite meteorological images**](http://www.sciencedirect.com/science/article/pii/S1364815205001970), _Environmental Modelling & Software_, 22(3):323-334, doi: [10.1016/j.envsoft.2005.07.032](http://dx.doi.org/10.1016/j.envsoft.2005.07.032).
