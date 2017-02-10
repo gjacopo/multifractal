@@ -1,7 +1,7 @@
-imfractal
+multifractal
 ============
 
-Tools for multifractal analysis of 2D images
+Tools (C/Matlab) for multifractal analysis of 1D (time-series) and 2D (images) signals
 ---
 
 Low-level image processing multifractal filters used in the experiments/analyses reported in the references listed [below](References).
