@@ -20,7 +20,8 @@ The code source files will enable you to reproduce some of the experiments menti
 * multifractal analysis and reconstruction of images using the so-called micro-wavelet,
 * estimation of the multifractal singularity exponents and the so-called Most Singular Manifold.
 
-Call [`run_multifractal.m`](run_multifractal.m) for an example of application. See also [`Contents.m`](Contents.m) for the whole list of functions. 
+In `Matlab`:call [`run_multifractal.m`](run_multifractal.m) for an example of application. See also [`Contents.m`](Contents.m) for the whole list of functions. 
+In `C`, use the `Makefile` to build from source. 
 
 **<a name="References"></a>References**
 
