@@ -1,0 +1,71 @@
+
+# Variable LIBRARY and PROGRAM should be defined (if there is a need for
+# it) in the FILELIST file only
+
+ifdef LIBNAME
+SRCS =  $(foreach f, $(LIST), $(addprefix $(DIR), $(create_srcs)))
+OBJS = $(foreach f, $(LIST), $(addprefix $(DIR), $(create_objs)))
+endif
+
+ifdef PROGRAM
+MAINSRCS =  $(foreach f, $(MAINLIST), $(addprefix $(DIR), $(create_srcs)))
+MAINOBJS = $(foreach f, $(MAINLIST), $(addprefix $(DIR), $(create_objs)))
+ifdef MAINHDRLIST
+MAINHDRS = $(foreach f, $(MAINHDRLIST), $(addprefix $(DIR), $(create_hdrs)))
+endif
+endif
+
+## Flags for compilation
+INCLUDE= -I$(CUR) -I$(INCUSR) -I$(INCDIR)
+CFLAGS = -O2 -g $(INCLUDE) 
+# -DDEBUG
+#-O
+#-pedantic -Wall  
+
+# External inrimage library
+ifeq ($(FLAG_INRIMAGE),TRUE)
+INRNAME = inrimage
+INCINR = $(DIRINST)/include/inrimage/
+LIBINRDIR = $(DIRINST)/lib/$(INRNAME)
+LIBINR = lib$(INRNAME)$(EXT)
+LFLAGINR = -l$(INRNAME)
+endif
+
+## Main variables, definitions and rules for the Makefile
+
+# external libs
+ifdef LIBLIST
+LIBS = $(foreach f, $(LIBLIST), $(addprefix -l, $(create_libs)))
+LIBSFLAG = -L$(LIBDIR) $(foreach f, $(LIBLIST), $(addprefix -l, $(f)))
+endif
+
+# current lib
+ifdef LIBNAME
+ifdef VERS
+# library to compile
+LIBRARY = lib$(LIBNAME)-$(VERS).$(LIBEXT)
+# flag for this library in case a testing program is present
+LIBRARYFLAG = -L$(CUR) -l$(LIBNAME)-$(VERS)
+else
+LIBRARY = lib$(LIBNAME).$(LIBEXT)
+LIBRARYFLAG = -L$(CUR) -l$(LIBNAME)
+endif
+endif
+
+# Update some variables
+
+ifeq ($(FLAG_INRIMAGE),TRUE)
+INCLUDE:= $(INCLUDE) -I$(INCINR) 
+CC := $(CC) -DFLAG_INRIMAGE
+LINKER := $(LINKER) -DFLAG_INRIMAGE
+LIBS := $(LIBS) $(LIBINR)
+LIBSFLAG:= $(LIBSFLAG) -L$(LIBINRDIR) $(LFLAGINR)
+endif
+
+ifdef VERS
+INCLUDE:= $(INCLUDE) -I$(INCDIR)-$(VERS) 
+endif
+
+# Flags for linker with this library
+LDFLAGS = $(LIBRARYFLAG) $(LIBSFLAG) -lm
+

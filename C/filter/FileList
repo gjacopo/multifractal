@@ -1,0 +1,22 @@
+## Names of the sources and other useful variables
+
+LIST = flt_fft1d \
+	flt_fft2d \
+	flt_stats1d \
+	flt_stats2d \
+	flt_deriva1d \
+	flt_deriva2d \
+	flt_wavelet1d \
+	flt_wavelet2d \
+	flt_histo \
+	flt_parse
+
+FLAG_INRIMAGE = FALSE
+
+LIBS = 
+
+LIBNAME = operator
+
+# LIBFLAG = $(ROUTNAME)-$(VERS)
+# LIBRARY = lib$(NAME)-$(VERS).$(LIBEXT)
+

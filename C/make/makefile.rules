@@ -1,0 +1,90 @@
+# Common rules of the Makefile
+
+all:: lib prog
+
+ifdef PROGRAM
+prog:: $(PROGRAM)
+else
+prog::
+endif
+
+ifdef LIBNAME
+lib: $(LIBNAME)
+else
+lib::
+endif
+
+.c.o:;$(CC) $(CFLAGS) -c $*.c -o $*.o
+
+ifdef LIBNAME
+
+$(LIBNAME):$(LIBRARY)
+
+$(LIBRARY):$(OBJS) 
+# 	@for f in $(LIST); do \
+# 	if [ -e $$f.$(SRCEXT) ]; then \
+# 		echo $(CC) $(CFLAGS) -c $$f.$(SRCEXT) -o $$f.$(OBJEXT); \
+# 		$(CC) $(CFLAGS) -c $$f.$(SRCEXT) -o $$f.$(OBJEXT); \
+# 	fi; \
+# 	done
+	@if [ -n "$(LIBRARY)" ]; then \
+		$(AR) $(ARFLAGS) $@ $(OBJS); \
+		$(RANLIB) $@; \
+	fi
+
+install-lib: cleanall $(LIBRARY)
+	@if [ -e $(LIBDIR)/$(LIBRARY) ]; then \
+		$(RM) $(LIBDIR)/$(LIBRARY); \
+	fi
+	$(MV) $(LIBRARY) $(LIBDIR)
+
+else
+install-lib:
+
+endif
+
+
+ifdef PROGRAM
+
+$(PROGRAM): $(MAINOBJS) $(MAINHDRS) $(LIBRARY)
+	@if [ -n "$(PROGRAM)" ]; then \
+		$(RM) $@; \
+		$(LINKER) $(CFLAGS) $(MAINOBJS) -o $@ $(LDFLAGS); \
+	fi
+
+install-prog: $(PROGRAM)
+	@if [ -n "$(PROGRAM)" ]; then \
+		if [ -e $(BINDIR)/$(PROGRAM) ]; then \
+			$(RM) $(BINDIR)/$(PROGRAM); \
+		fi; \
+	$(MV) $(PROGRAM) $(BINDIR); \
+	fi
+
+else
+install-prog:
+
+endif
+
+
+install: install-lib install-prog
+
+
+# Help for the Makefile
+help:
+	@echo "Main flags for the make command"
+	@if [ -n "$(PROGRAM)" ]; then \
+		echo "   - make prog : create program" $(PROGRAM); \
+	fi
+	@if [ -n "$(LIBRARY)" ]; then \
+		echo "   - make lib : create library" $(LIBRARY); \
+	fi
+	@echo "   - make clean : clean object files"
+	@echo "   - make cleanall : clean objects, libraries and programs"
+
+
+clean:
+	$(RM) *.o *~ $(LIBRARY) $(PROGRAM) 
+
+
+cleanall:
+	$(RM) *.o *~ $(LIBDIR)/$(LIBRARY) 

@@ -1,0 +1,25 @@
+## Names of the sources and other useful variables
+
+LIST = mf_simulation \
+	mf_analysis \
+	mf_source  \
+	mf_manifold  \
+	mf_distribution  \
+	mf_wtmm1d  \
+	mf_parse 
+	
+FLAG_INRIMAGE = FALSE
+
+VERS=2.0
+
+HDRS=var_msm.$(HDREXT)
+
+LIBS = 
+
+LIBNAME = mfractal
+
+# LIBFLAG = $(ROUTNAME)-$(VERS)
+# LIBRARY = lib$(NAME)-$(VERS).$(LIBEXT)
+
+
+

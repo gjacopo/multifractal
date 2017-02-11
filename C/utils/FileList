@@ -1,0 +1,19 @@
+## Names of the sources and other useful variables
+
+LIST = utl_alloc \
+	utl_char \
+	utl_stats \
+	utl_operator \
+	utl_parse
+	
+FLAG_INRIMAGE = FALSE
+
+LIBS = 
+
+HDRS=utl_.$(HDREXT)
+
+LIBNAME = utils
+
+# LIBFLAG = $(NAME)-$(VERS)
+# LIBRARY = lib$(NAME)-$(VERS).$(LIBEXT)
+

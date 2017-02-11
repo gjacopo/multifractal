@@ -1,0 +1,60 @@
+## Common instructions
+ 
+## Absolute paths of personal install/lib/inc/bin directories
+LOCALDIR =$(HOME)/local
+LOCALSHARE =$(LOCALDIR)/share
+LOCALBIN =$(LOCALDIR)/bin
+LOCALLIB =$(LOCALDIR)/lib
+LOCALINC =$(LOCALDIR)/include
+
+# Install directory for some specific programs
+DIRINST = $(LOCALDIR)
+
+## Absolute paths of directories where inputs/outputs are
+## temporary stored
+
+# lib/inc/bin directories
+SRCDIR = $(HOME)/SRC
+LIBDIR = $(SRCDIR)/lib 
+INCDIR = $(SRCDIR)/include
+
+## Corresponding relative paths
+NAMEINC =include
+NAMELIB =lib
+NAMEBIN =bin
+
+INCDIR =$(REL)/$(NAMEINC)
+LIBDIR =$(REL)/$(NAMELIB)
+BINDIR =$(REL)/$(NAMEBIN)
+
+## Paths for standard libraries
+LIBUSR =/usr/local/lib/
+INCUSR =/usr/local/include
+
+## Variables below should not be modified ##
+
+## Variables for compilation	
+
+SHELL = /bin/sh
+
+RM = rm -f
+MV = mv
+CC = gcc 
+LINKER = gcc
+AR= ar 
+ARFLAGS = r
+# cv
+RANLIB = ranlib
+
+OBJEXT = o
+SRCEXT = c
+HDREXT = h
+LIBEXT = a
+SHAREDEXT  = so
+
+
+# useful functions
+create_objs=$(addsuffix .$(OBJEXT), $(f))
+create_hdrs= $(addsuffix .$(HDREXT), $(f))
+create_srcs= $(addsuffix .$(SRCEXT), $(f))
+create_libs= $(addsuffix .$(LIBEXT), $(f))

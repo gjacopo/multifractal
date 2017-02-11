@@ -1,0 +1,20 @@
+## Names of the sources and other useful variables
+
+LIST = sig_alloc \
+	sig_operator \
+	sig_gradient \
+	sig_stats \
+	pix_alloc \
+	pix_operator
+
+
+FLAG_INRIMAGE = FALSE
+
+LIBS = 
+# -L$(DIRLIB) -L$(USRLIB) -L$(CURLIB) \
+# -l$(CALCLIB) -l$(GRAFLIB) -l$(ROUTLIB) 
+
+LIBNAME = signal
+# LIBFLAG = $(NAME)-$(VERS)
+# LIBRARY = lib$(NAME)-$(VERS).$(LIBEXT)
+
