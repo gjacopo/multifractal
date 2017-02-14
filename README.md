@@ -4,7 +4,7 @@ multifractal
 Tools (C/Matlab) for multifractal analysis of 1D (time-series) and 2D (images) signals
 ---
 
-Low-level image processing multifractal filters used in the experiments/analyses reported in the references listed [below](References).
+Low-level image processing filters used in multifractal experiments/analyses over signals and images.
 
 **About**
 
@@ -17,12 +17,12 @@ Low-level image processing multifractal filters used in the experiments/analyses
 **Description**
 
 The code source files will enable you to reproduce some of the experiments mentioned in the references [below](References), namely for:
-* multifractal analysis of images using the so-called micro-wavelet,
+* multifractal analysis of signals/images using the so-called micro-wavelet,
 * calculation of the multifractal singularity exponents and the multifractal spectrum,
-* multifracal decomposition of images,
+* multifracal decomposition of signals/images,
 * extraction of the so-called Most Singular Manifold,
-* characterisation of the so-called chromatically reduced image,
-* multifractal reconstruction of images.
+* characterisation of the so-called chromatically reduced signal/image,
+* multifractal reconstruction of signals/images.
 
 **Usage**
 
