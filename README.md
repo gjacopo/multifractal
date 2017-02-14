@@ -24,6 +24,8 @@ The code source files will enable you to reproduce some of the experiments menti
 * characterisation of the so-called chromatically reduced signal/image,
 * multifractal reconstruction of signals/images.
 
+See also [`singularity` project](https://github.com/gjacopo/singularity) for multifractal singularity analysis of 1D (time-series) signals.
+
 **Usage**
 
 To launch the programs:
@@ -34,6 +36,7 @@ To launch the programs:
 
 * Yahia H., Turiel A., Chrysoulakis N., Grazzini J., Prastacos P., and Herlin I. (2008): [**Application of the multifractal microcanonical formalism to the detection of fire plumes in NOAA-AVHRR data**](http://www.tandfonline.com/doi/abs/10.1080/01431160701840174), _International Journal of Remote Sensing_, 29(14):4189-4205, doi:[10.1080/01431160701840174](http://dx.doi.org/10.1080/01431160701840174).
 * Grazzini J., Turiel A., Yahia H., and Herlin I. (2007): [**A multifractal approach for extracting relevant textural areas in satellite meteorological images**](http://www.sciencedirect.com/science/article/pii/S1364815205001970), _Environmental Modelling & Software_, 22(3):323-334, doi: [10.1016/j.envsoft.2005.07.032](http://dx.doi.org/10.1016/j.envsoft.2005.07.032).
+* Turiel A., Pérez-Vicente C.J., and Grazzini J. (2006): [**Numerical methods for the estimation of singularity spectra on sampled data: a comparative study**](http://www.sciencedirect.com/science/article/pii/S0021999105005565), _Journal of Computational Physics_, 216(1):362-390, doi: [10.1016/j.jcp.2005.12.004](http://dx.doi.org/10.1016/j.jcp.2005.12.004).
 * Grazzini J., Turiel A., and Yahia H. (2006): **Multifractal formalism for remote sensing: A contribution to the description and the understanding of meteorological phenomena in satellite images**, _Complexus Mundi. Emergent Patterns in Nature_, pp.247-256, _World Scientific_, doi: [10.1142/9789812774217_0022](http://dx.doi.org/10.1142/9789812774217_0022).
 * Grazzini J. and Chrysoulakis N. (2005): [**Extraction of surface properties from a high accuracy DEM using multiscale remote sensing techniques**](http://enviroinfo.eu/sites/default/files/pdfs/vol111/0352.pdf), in _Proc. EnviroInfo_, pp.352-356.
 * Turiel A., Grazzini J., and Yahia H. (2005): **Multiscale techniques for the detection of precipitation using thermal IR satellite images**, _IEEE Geoscience and Remote Sensing Letters_, 2(4):447-450, doi: [10.1109/LGRS.2005.852712](https://doi.org/10.1109/LGRS.2005.852712).
