@@ -17,8 +17,14 @@ Low-level image processing multifractal filters used in the experiments/analyses
 **Description**
 
 The code source files will enable you to reproduce some of the experiments mentioned in the references [below](References), namely for:
-* multifractal analysis and reconstruction of images using the so-called micro-wavelet,
-* estimation of the multifractal singularity exponents and the so-called Most Singular Manifold.
+* multifractal analysis of images using the so-called micro-wavelet,
+* calculation of the multifractal singularity exponents and the multifractal spectrum,
+* multifracal decomposition of images,
+* extraction of the so-called Most Singular Manifold,
+* characterisation of the so-called chromatically reduced image,
+* multifractal reconstruction of images.
+
+**Usage**
 
 To launch the programs:
 * in `Matlab`, see also [`Contents.m`](Contents.m) for the whole list of functions; call [`run_multifractal.m`](run_multifractal.m) for an example of application; 
