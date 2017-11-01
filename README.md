@@ -30,7 +30,7 @@ See also [`singularity` project](https://github.com/gjacopo/singularity) for mul
 **Usage**
 
 To launch the programs:
-* in `Matlab`, see also [`Contents.m`](Contents.m) for the whole list of functions; call [`run_multifractal.m`](run_multifractal.m) for an example of application; 
+* in `Matlab`, see also [`Contents.m`](matlab/Contents.m) for the whole list of functions; call [`run_multifractal.m`](matlab/run_multifractal.m) for an example of application; 
 * in `C`, use the `Makefile` to build from source. 
 
 **<a name="References"></a>References**
