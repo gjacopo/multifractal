@@ -5,15 +5,7 @@ multifractal
 Tools (C/Matlab) for multifractal analysis of 1D (time-series) and 2D (images) signals
 ---
 
-Low-level image processing filters used in multifractal experiments/analyses over signals and images.
-
-**About**
-
-<table align="center">
-    <tr> <td align="left"><i>version</i></td> <td align="left">1.0 <i>(non-active development)</i> </td> </tr> 
-    <tr> <td align="left"><i>since</i></td> <td align="left">2002</td> </tr> 
-    <tr> <td align="left"><i>license</i></td> <td align="left"><a href="https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-en_0.pdfEUPL">EUPL</a>  <i>(cite the source code or any of the references below!)</i> </td> </tr> 
-</table>
+The material herein provides with low-level image processing filters that can be used for multifractal experiments/analyses of signals and images.
 
 **Description**
 
@@ -32,6 +24,14 @@ See also [`singularity` project](https://github.com/gjacopo/singularity) for mul
 To launch the programs:
 * in `Matlab`, see also [`Contents.m`](matlab/Contents.m) for the whole list of functions; call [`run_multifractal.m`](matlab/run_multifractal.m) for an example of application; 
 * in `C`, use the `Makefile` to build from source. 
+
+**About**
+
+<table align="center">
+    <tr> <td align="left"><i>version</i></td> <td align="left">1.0 <i>(non-active development)</i> </td> </tr> 
+    <tr> <td align="left"><i>since</i></td> <td align="left">2002</td> </tr> 
+    <tr> <td align="left"><i>license</i></td> <td align="left"><a href="https://joinup.ec.europa.eu/sites/default/files/eupl1.1.-licence-en_0.pdfEUPL">EUPL</a>  <i>(cite the source code or any of the references below!)</i> </td> </tr> 
+</table>
 
 **<a name="References"></a>References**
 
